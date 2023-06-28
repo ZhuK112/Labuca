@@ -16,13 +16,13 @@
     function x(){
             for (var i=xmax;i>=xmin;i=i-4){
                 if(i<4){
-                    W =  Math.pow(x, 2) + Math.exp(x);
+                    V =  Math.pow(x, 2) + Math.exp(x);
                 }
                 if(i===4){
-                    W = pi + 2;
+                    V = pi + 2;
                 }
                 if(i>4){
-                    W = Math.pow(Math.sin(x), 2) + Math.log(x);
+                    V = Math.pow(Math.sin(x), 2) + Math.log(x);
                 }
                 alert("Рузультат розрахунків при аргументі "+i+" = "+W);
             }
