@@ -14,15 +14,15 @@
     var xmax = prompt('enter xmax','');
     var W;
     function x(){
-            for (var i=xmax;i>=xmin;i=i-2){
-                if(i<2){
-                    W = Math.pow(Math.cos(i), 2);
+            for (var i=xmax;i>=xmin;i=i-4){
+                if(i<4){
+                    W =  Math.pow(x, 2) + Math.exp(x);
                 }
-                if(i===2){
-                    W = Math.tan(i)+Math.pow(i, 3.7);
+                if(i===4){
+                    W = pi + 2;
                 }
-                if(i>2){
-                    W = Math.abs(1-Math.pow(i,2));
+                if(i>4){
+                    W = Math.pow(Math.sin(x), 2) + Math.log(x);
                 }
                 alert("Рузультат розрахунків при аргументі "+i+" = "+W);
             }
