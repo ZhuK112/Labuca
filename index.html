@@ -12,9 +12,9 @@
 <script>
     var xmin = prompt('enter xmin','');
     var xmax = prompt('enter xmax','');
-    var W;
+    var V;
     function x(){
-            for (var i=xmax;i>=xmin;i=i-4){
+            for (var i=xmax;i>=xmin;i=i-2){
                 if(i<4){
                     V =  Math.pow(x, 2) + Math.exp(x);
                 }
@@ -24,7 +24,7 @@
                 if(i>4){
                     V = Math.pow(Math.sin(x), 2) + Math.log(x);
                 }
-                alert("Рузультат розрахунків при аргументі "+i+" = "+W);
+                alert("Рузультат розрахунків при аргументі "+i+" = "+V);
             }
         }
 </script>
