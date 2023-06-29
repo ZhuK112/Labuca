@@ -1,33 +1,42 @@
-<!doctype html>
-<html lang="X-UA-Compatible">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>math</title>
+  <title>Розгалужений обчислювальний процес</title>
+  <script>
+    function calculateValues() {
+      var xStart = parseInt(document.getElementById("xStart").value);
+      var xStep = parseInt(document.getElementById("xStep").value);
+      var output = document.getElementById("output");
+      
+      output.innerHTML = ""; // Очищаємо вміст виводу перед новими розрахунками
+      
+      for (var x = xStart; x <= 6; x += xStep) {
+        var result;
+        
+        if (x < 4) {
+          result = Math.pow(x, 2) + Math.exp(x);
+        } else if (x === 4) {
+          result = Math.PI + 2;
+        } else {
+          result = Math.pow(Math.sin(x), 2) + Math.log(x);
+        }
+        
+        output.innerHTML += "При x = " + x + ", V = " + result + "<br>";
+      }
+    }
+  </script>
 </head>
 <body>
-<input type="button" value="Розгалужений обчислювальний процес" onclick="x()">
-<script>
-    var xmin = prompt('enter xmin','');
-    var xmax = prompt('enter xmax','');
-    var V;
-    function x(){
-            for (var i=xmax;i>=xmin;i=i-2){
-                if(i<4){
-                    V =  Math.pow(x, 2) + Math.exp(x);
-                }
-                if(i===4){
-                    V = pi + 2;
-                }
-                if(i>4){
-                    V = Math.pow(Math.sin(x), 2) + Math.log(x);
-                }
-                alert("Рузультат розрахунків при аргументі "+i+" = "+V);
-            }
-        }
-</script>
-
+  <h2>Розгалужений обчислювальний процес</h2>
+  
+  <label for="xStart">Початкове значення x:</label>
+  <input type="number" id="xStart">
+  
+  <label for="xStep">Крок зміни значень x:</label>
+  <input type="number" id="xStep">
+  
+  <button onclick="calculateValues()">Обчислити</button>
+  
+  <div id="output"></div>
 </body>
 </html>
